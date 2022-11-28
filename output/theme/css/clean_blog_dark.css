@@ -1,0 +1,19 @@
+.dark body{
+	background-color:  #121212;
+	color: #ffffff;
+}
+
+.dark .post-preview > a,
+.dark .post-preview > a{
+	color: #ffffff;	
+}
+
+.post-preview > a:hover,
+.post-preview > a:focus {
+  text-decoration: none;
+  color: #0085a1;
+}
+
+nav a{
+	cursor: pointer;
+}
