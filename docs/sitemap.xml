@@ -5,7 +5,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2022-11-28T16:51:48-00:00</lastmod>
+<lastmod>2022-11-28T18:00:38-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -19,35 +19,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/alpine-js-framework-untuk-backend-developer.html</loc>
-<lastmod>2022-11-28T16:32:31+07:00</lastmod>
+<lastmod>2022-11-28T17:58:38+07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/cara-memulai-project-framework-django.html</loc>
-<lastmod>2022-11-28T16:46:21+07:00</lastmod>
+<lastmod>2022-11-28T17:58:29+07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/django.html</loc>
-<lastmod>2022-11-28T16:46:21+07:07</lastmod>
+<lastmod>2022-11-28T17:58:29+07:07</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/category/framework.html</loc>
-<lastmod>2022-11-28T16:32:31+07:07</lastmod>
+<lastmod>2022-11-28T17:58:38+07:07</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/author/alfarizi.html</loc>
-<lastmod>2022-11-28T16:46:21+07:07</lastmod>
+<lastmod>2022-11-28T17:58:38+07:07</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
