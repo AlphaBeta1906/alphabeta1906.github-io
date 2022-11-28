@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{dark: false}" :class="dark?'dark':'light'" x-init="dark=localStorage.getItem('dark') == 'true'?true:false">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js" integrity="sha512-P3/SDm/poyPMRBbZ4chns8St8nky2t8aeG09fRjunEaKMNEDKjK3BuAstmLKqM7f6L1j0JBYcIRL4h2G6K6Lew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="My personal blogging website">
+
+            <meta name="google-site-verification" content="yf_iZ9OPl9MH07cqCuRwS7TX4FTu1xYrdf5WuzPLpK8">
+
+        <title>Cara memulai project framework Django</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="https://alphabeta1906.github.io/theme/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="https://alphabeta1906.github.io/theme/css/clean-blog.css" rel="stylesheet">
+
+        <link href="https://alphabeta1906.github.io/theme/css/clean_blog_dark.css" rel="stylesheet">
+
+        <!-- Code highlight color scheme -->
+            <link href="https://alphabeta1906.github.io/theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+    <meta name="keywords" content="django,python,framework,website,fullstack" >
+        <meta name="description" content="Disini saya akan menjelaskan bagaimana cara melakukan instalasi framework Django, bagi yang ingin cari tau lebh dulu tentang apa itu...">
+
+        <meta name="author" content="Alfarizi">
+
+
+	                <meta property="og:locale" content="">
+		<meta property="og:site_name" content="Alphablog">
+
+	<meta property="og:type" content="article">
+            <meta property="article:author" content="https://alphabeta1906.github.io/author/alfarizi.html">
+	<meta property="og:url" content="https://alphabeta1906.github.io/cara-memulai-project-framework-django.html">
+	<meta property="og:title" content="Cara memulai project framework Django">
+	<meta property="article:published_time" content="2022-11-28 00:00:00+07:00">
+            <meta property="og:description" content="Disini saya akan menjelaskan bagaimana cara melakukan instalasi framework Django, bagi yang ingin cari tau lebh dulu tentang apa itu...">
+
+            <meta property="og:image" content="https://alphabeta1906.github.io//images/alpine_cover.jpg">
+</head>
+
+<body class="article-cara-memulai-project-framework-django">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default is-fixed is-visible navbar-custom navbar-sticky">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://alphabeta1906.github.io/">Alphablog</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" x-data>
+                    <li style="padding-top: 0px">
+                        <a x-on:click="dark = !dark;localStorage.setItem('dark',dark)">
+                            <i :class="dark?'fas fa-moon':'fas fa-sun'"  style="font-size: 16pt;"></i>
+                        </a>
+                    </li>                    
+                        <li x-init="console.log(document.title)">
+                            <a href="pages/about.html">About</a>
+                        </li>
+                        <li x-init="console.log(document.title)">
+                            <a href="/categories.html">Categories</a>
+                        </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading pb-3">
+                     <a class="category" href="https://alphabeta1906.github.io/category/django.html" title="Kategori post: Django ">#Django</a> 
+                    <h1>Cara memulai project framework Django</h1>
+                    <span class="meta">
+                        <img src="http://cdn.libravatar.org/avatar/ba235872f97ec055ffeb763abaf35007" alt="author image" style="width: 5rem;height: 5rem;margin-bottom: 3rem;">
+                            <a href="https://alphabeta1906.github.io/author/alfarizi.html">Alfarizi</a>
+                        · 28 Nov 2022 
+                    </span>
+                
+                        <img src="https://alphabeta1906.github.io/images/alpine_cover.jpg" style="height: 350px;width: 100%;border-radius: 2%;" />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <!-- Post Content -->
+    <article>
+        <p>Disini saya akan menjelaskan bagaimana cara melakukan instalasi framework Django, bagi yang ingin cari tau lebh dulu tentang apa itu Django bisa klik <a href="https://alphablog.pythonanywhere.com/read/what-is-django-web-framework">disini</a>.</p>
+<p>untuk tutorial ini saya akan menggunakan Django versi 3.2 atau versi LTS(long  time support) yang akan disuport dalam jangka waktu yang  cukup lama.</p>
+<h2>Proses instalasi</h2>
+<p>sebelum memulai proses instalasi, ada 3 tools yang sebaiknya tersedia lebih dahulu yaitu:</p>
+<ol>
+<li>python 3 : bahasa pemograman yang digunakan Django</li>
+<li>pip : package manager yang digunakan untuk melakukan instalasi Django</li>
+<li>virtualenv: virtual environment yang digunakan untuk melakukan isolasi terhadap setiap project sehingga tidak terjadi dependensi/package yang saling tercampur</li>
+</ol>
+<p>Nah jika semua tools sudah tersedia, mari kita masuk ke proses instalasi, berikut adalah command yang digunakan</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># membuat folder project</span>
+$ mkdir project_django
+
+<span class="c1"># pindah directory ke folder project</span>
+$  <span class="nb">cd</span> project_django
+
+<span class="c1"># buat virtualenv</span>
+$ virtualenv venv 
+
+<span class="c1"># aktifkan virtualenv</span>
+$ . venv/bin/activate
+
+<span class="c1"># install django, jika kalian tidak menambahkan ==3.2 dibelakang django, maka pip akan menginstall versi paling baru dari django yaitu 4.1(bukan LTS)</span>
+ <span class="o">(</span>venv<span class="o">)</span> $ pip install <span class="nv">django</span><span class="o">==</span><span class="m">3</span>.2
+</code></pre></div>
+
+<p>JIka proses instalasi tidak ada error, kita bisa cek menggunakan command berikut: </p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span> $ django-admin version
+<span class="c1"># jika muncul angka seperti ini artinya instalasi django suksess !</span>
+<span class="m">3</span>.2
+</code></pre></div>
+
+<p>JIka proses instalasi sudah selesai, saatnya kita memulai pembuatan project Django.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># titik di belakang menandakan jika kita langsung membuat project di folder saat ini</span>
+<span class="o">(</span>venv<span class="o">)</span> $ django-admin startproject django_tutorial .
+
+<span class="c1"># untuk memverifikasi </span>
+<span class="o">(</span>venv<span class="o">)</span> $ ls
+django_tutorial  manage.py  venv
+</code></pre></div>
+
+<p>penjelasan:   </p>
+<ul>
+<li><code>django_tutorial</code> : folder inti dari project kita</li>
+<li><code>manage.py</code>: script python dari django yang akan memudahkan dalam melakukan manajemen project</li>
+<li><code>venv</code> : folder yang berisi package yang diinstall oleh pip</li>
+</ul>
+<p>Server development django dapat lansung dijalankan menggunkanan command berikut:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># command untuk menjalankan server development</span>
+<span class="o">(</span>venv<span class="o">)</span> $ python manage.py runsever
+Watching <span class="k">for</span> file changes with StatReloader
+Performing system checks...
+
+System check identified no issues <span class="o">(</span><span class="m">0</span> silenced<span class="o">)</span>.
+
+You have <span class="m">18</span> unapplied migration<span class="o">(</span>s<span class="o">)</span>. Your project may not work properly <span class="k">until</span> you apply the migrations <span class="k">for</span> app<span class="o">(</span>s<span class="o">)</span>: admin, auth, contenttypes, sessions.
+Run <span class="s1">&#39;python manage.py migrate&#39;</span> to apply them.
+August <span class="m">31</span>, <span class="m">2022</span> - <span class="m">05</span>:18:32
+Django version <span class="m">3</span>.2, using settings <span class="s1">&#39;django_tutorial.settings&#39;</span>
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+<span class="o">[</span><span class="m">31</span>/Aug/2022 <span class="m">05</span>:18:40<span class="o">]</span> <span class="s2">&quot;GET / HTTP/1.1&quot;</span> <span class="m">200</span> <span class="m">10697</span>
+Not Found: /favicon.ico
+</code></pre></div>
+
+<p>Note: tulisan merah yang muncul bukanlah error, melainkan migrasi bawaan yang belum di dijalankan
+jika ingin menghilangkan cukup dengan command berkut:</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span> $ python manage.py migrate
+<span class="c1"># jika muncul seperti dibawah, berarti migrasi bawaan django sudah dijalnkan dan akan menggunakan databse SQlite jika databse belum di setting</span>
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+</code></pre></div>
+
+<p>Lalu jalankan lagi servernya dan copy : http://127.0.0.1:8000/ lalu paste kan di broswer kalian, maka akan muncul: 
+<a href="https://ibb.co/ykMHPHC"><img src="https://i.ibb.co/qg4TjT8/Screenshot-20220831-121850.png" alt="Screenshot-20220831-121850" border="0" /></a></p>
+<p>Selamat, setup project DJango sudah selesai!!</p>
+<p>Dan itulah cara untuk memulai project baru dengan framework Django.</p>
+    </article>
+
+
+    <hr>
+
+        <div class="comments">
+            <h2>Comments !</h2>
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                var disqus_shortname = 'alphablog-2';
+                var disqus_identifier = 'cara-memulai-project-framework-django.html';
+                var disqus_url = 'https://alphabeta1906.github.io/cara-memulai-project-framework-django.html';
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//alphablog-2.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                            <li>
+                                <a href="https://github.com/alphabeta1906">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                    </ul>
+<p class="copyright text-muted">
+    Blog powered by <a href="http://getpelican.com">Pelican</a>,
+    which takes great advantage of <a href="http://python.org">Python</a>. <br />        &copy;  Alfarizi
+</p>                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script data-turbolinks-eval=false src="https://alphabeta1906.github.io/theme/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script data-turbolinks-eval=false src="https://alphabeta1906.github.io/theme/js/bootstrap.min.js"></script>
+
+    <script data-turbolinks-eval=false src="https://alphabeta1906.github.io/theme/js/alpine.js"></script>
+
+    
+
+        <!-- Custom Theme JavaScript -->
+        <script src="https://alphabeta1906.github.io/theme/js/clean-blog.js"></script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'alphablog-2';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+
+</html>
