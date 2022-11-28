@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{dark: false}" :class="dark?'dark':'light'" x-init="dark=localStorage.getItem('dark') == 'true'?true:false">
+<html lang="en" x-data="{dark: localStorage.getItem('dark') == 'true'?true:false}" :class="dark?'dark':'light'">
 
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.0/turbolinks.js" integrity="sha512-P3/SDm/poyPMRBbZ4chns8St8nky2t8aeG09fRjunEaKMNEDKjK3BuAstmLKqM7f6L1j0JBYcIRL4h2G6K6Lew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -8,21 +8,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="My personal blogging website">
+        <meta name="turbolinks-cache-control" content="no-cache">
 
             <meta name="google-site-verification" content="yf_iZ9OPl9MH07cqCuRwS7TX4FTu1xYrdf5WuzPLpK8">
 
         <title>Alphablog - Tags</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="https://alphabeta1906.github.io/theme/css/bootstrap.css" rel="stylesheet">
+        <link href="/theme/css/bootstrap.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="https://alphabeta1906.github.io/theme/css/clean-blog.css" rel="stylesheet">
+        <link href="/theme/css/clean-blog.css" rel="stylesheet">
 
-        <link href="https://alphabeta1906.github.io/theme/css/clean_blog_dark.css" rel="stylesheet">
+        <link href="/theme/css/clean_blog_dark.css" rel="stylesheet">
 
         <!-- Code highlight color scheme -->
-            <link href="https://alphabeta1906.github.io/theme/css/code_blocks/monokai.css" rel="stylesheet">
+            <link href="/theme/css/code_blocks/monokai.css" rel="stylesheet">
 
 
         <!-- Custom Fonts -->
@@ -53,7 +54,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://alphabeta1906.github.io/">Alphablog</a>
+                <a class="navbar-brand" href="/">Alphablog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -79,7 +80,7 @@
     </nav>
 
     <!-- Page Header -->
-        <header class="intro-header" style="background-image: url('https://alphabeta1906.github.io/images/cover.jpg')">
+        <header class="intro-header" style="background-image: url('/images/webp/cover.webp')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -123,17 +124,17 @@
     </footer>
 
     <!-- jQuery -->
-    <script data-turbolinks-eval=false src="https://alphabeta1906.github.io/theme/js/jquery.min.js"></script>
+    <script data-turbolinks-eval=false src="/theme/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script data-turbolinks-eval=false src="https://alphabeta1906.github.io/theme/js/bootstrap.min.js"></script>
+    <script data-turbolinks-eval=false src="/theme/js/bootstrap.min.js"></script>
 
-    <script data-turbolinks-eval=false src="https://alphabeta1906.github.io/theme/js/alpine.js"></script>
+    <script data-turbolinks-eval=false src="/theme/js/alpine.js"></script>
 
     
 
         <!-- Custom Theme JavaScript -->
-        <script src="https://alphabeta1906.github.io/theme/js/clean-blog.js"></script>
+        <script src="/theme/js/clean-blog.js"></script>
 
 <script type="text/javascript">
     var disqus_shortname = 'alphablog-2';
