@@ -1,0 +1,7 @@
+themes/
+__pycache__/
+pelicanconf.py
+Pipfile
+Pipfile.lock
+publishconf.py
+content/
